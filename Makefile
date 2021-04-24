@@ -11,6 +11,11 @@ test:
 	@echo "  >  run unit-test..."
 	go test -v -race -timeout 30s ./...
 
+## bench: Run all benchmark-test
+bench:
+	@echo "  >  run unit-test..."
+	go test -benchmem -bench=. ./...
+
 all: help
 help: Makefile
 	@echo
